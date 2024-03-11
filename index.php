@@ -135,10 +135,20 @@
                               include 'toko.php';
                         }elseif($_GET["halaman"] == "market_place"){
                              include 'market_place.php';
-					}elseif($_GET["halaman"] == "komplain"){
-                        include 'komplain.php';
-               }
-					else{
+                        }
+                        elseif($_GET["halaman"] == "komplain"){
+                            include 'komplain.php';
+                        }
+                        elseif($_GET["halaman"] == "vendor"){
+                            include 'vendor.php';
+                	   }
+                        elseif($_GET["halaman"] == "perusahaan"){
+                        include 'perusahaan.php';
+                       }
+                       elseif($_GET["halaman"] == "ekspedisi"){
+                        include 'ekspedisi.php';
+                       }
+					   else{
 						include 'home.php';
 					}
                 }
@@ -190,8 +200,8 @@
         <script src="js/select4.js"></script>
 
         <script>
-       
 
+    
           $(document).ready(function() {
             $('#datatablesSimple').DataTable( {
                 "bFilter" : false, 
@@ -208,14 +218,14 @@
       $(document).ready(function() {
             $('#myTable').DataTable( {
                 
-             // scrollY :'300px',  
+            //  scrollY :'300px',  
         } );
 
       } );
         $(document).ready(function() {
             $('#tablerak').DataTable( {
              "bFilter" : false, 
-               scrollY :'300px', 
+            //    scrollY :'300px', 
         } );
 
       } );
@@ -232,6 +242,7 @@
             $('#tabletrans').DataTable( {
              "bFilter" : false,  
         } );
+        
 
       } );
     

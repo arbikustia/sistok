@@ -1,5 +1,5 @@
 <?php 
-include 'koneksi.php';
+include '../../koneksi/koneksi.php';
 
 if (isset($_POST['BtnEdit'])) {
     $kode2 = $_POST['kodeawal'];

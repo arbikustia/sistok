@@ -1,5 +1,5 @@
 <?php 
-include 'koneksi.php';
+include '../../koneksi/koneksi.php';
 
 if (isset($_POST['BtnSimpan'])) {
   $kode = $_POST['kode'];

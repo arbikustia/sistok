@@ -1,5 +1,6 @@
 <?php 
-include 'koneksi.php';
+include '../../koneksi/koneksi.php';
+
 
 if (isset($_POST['BtnSimpan'])) {
   $nama = $_POST['namaToko'];
@@ -10,14 +11,14 @@ if (isset($_POST['BtnSimpan'])) {
     ?>
     <script type="text/javascript">
         alert("Berhasil");
-        window.location='index.php?halaman=toko';
+        window.location='../../index.php?halaman=toko';
     </script>
      <?php
 }else{
     ?>
     <script type="text/javascript">
        alert("Gagal");
-       window.location='index.php?halaman=toko';
+       window.location='../../index.php?halaman=toko';
     </script>
      <?php
 }

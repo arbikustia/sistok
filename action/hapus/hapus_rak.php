@@ -1,5 +1,5 @@
 <?php 
-include 'koneksi.php';
+include '../../koneksi/koneksi.php';
 
 if (isset($_POST['BtnHapus'])) {
    $kon = mysqli_query($kon, "Delete from tb_rak where NO_RAK = '$_POST[kode]'");

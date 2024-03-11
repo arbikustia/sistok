@@ -1,5 +1,5 @@
 <?php 
-include 'koneksi.php';
+include '../../koneksi/koneksi.php';
 
 if (isset($_POST['BtnSimpan'])) {
   $nama = $_POST['namaMarket'];
@@ -10,14 +10,14 @@ if (isset($_POST['BtnSimpan'])) {
     ?>
     <script type="text/javascript">
         alert("Berhasil");
-        window.location='index.php?halaman=market_place';
+        window.location='../../index.php?halaman=market_place';
     </script>
      <?php
 }else{
     ?>
     <script type="text/javascript">
        alert("Gagal");
-       window.location='index.php?halaman=market_place';
+       window.location='../../index.php?halaman=market_place';
     </script>
      <?php
 }

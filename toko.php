@@ -4,7 +4,7 @@
 <a class="btn btn-primary btn mt-1 mb-1"  data-bs-toggle="modal" data-bs-target="#modalTambah">Tambah Toko</a>
 </div>
 
-<div class="modal-body col-md-8 px-4 mt-3">
+<div class="modal-body col-md-12   px-4 mt-3">
                     <div class="table-responsive">
                     <table id="myTable" class="table table-bordered" cellspacing="1">
                         <thead>
@@ -46,7 +46,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                          <form action="hapus_toko.php" method="post">
+                          <form action="action/hapus/hapus_toko.php" method="post">
                                   <input type="hidden" class="form-control" name="id" value="<?= $data['id']?>">
                                   <h6 class="text-center">Apakah anda yakin akan menghapus <span class="text-danger"><?= $data['nama_toko']?></span> ? <br></h6>
                            
@@ -69,7 +69,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                          <form action="ubah_toko.php" method="post">
+                          <form action="action/ubah/ubah_toko.php" method="post">
                           <div class="form-group">
                           <input type="hidden" name="id" value="<?= $data['id']?>" readonly>
                           </div>
@@ -102,7 +102,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                          <form action="tambah_toko.php" method="post">
+                          <form action="action/tambah/tambah_toko.php" method="post">
                           <div class="form-group">
                           <label class="col-form-label col-form-label-sm" for="username">Nama Toko</label>
                           <input type="text" class="form-control" name="namaToko">
