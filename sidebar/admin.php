@@ -10,7 +10,7 @@ $count1 = mysqli_num_rows($get1);
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-            <div class="sb-sidenav-menu h-3">
+            <div class="sb-sidenav-menu h-3 ">
                 <div class="nav">
                     <!--<a class="nav-link" href="index.php">-->
                     <!--    <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>-->
@@ -116,10 +116,29 @@ $count1 = mysqli_num_rows($get1);
                                             class="fa-solid fa-building-columns"></i>&nbsp;Master Perusahaan</a>
                                 </nav>
                             </div>
-
-
-
                         </div>
+                        <div class="nav">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#hutang-vendor"
+                                aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-gear"></i></div>
+                                PEMBAYARAN HUTANG VENDOR
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="hutang-vendor" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="index.php?halaman=dashboard_pembayaran"><i
+                                            class="fa fa-user"></i>&nbsp;Dashboard</a>
+                                    <a class="nav-link" href="index.php?halaman=pencarian_komplain"><i
+                                            class="fa-solid fa-shop"></i>&nbsp;Pencarian komplain</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=jatuh_tempo"><i
+                                            class="fa-solid fa-bag-shopping"></i>&nbsp;Pembayaran Jatuh Tempo</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=tambah_pembayaran"><i
+                                            class="fa-regular fa-handshake"></i>&nbsp;Tambah Pembayaran</a>
+                                </nav>
+                            </div>
+                        </div>
+                
         </nav>
 
 

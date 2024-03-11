@@ -1,0 +1,16 @@
+{
+    "data" : [
+        {
+            "label" : "Inventory",
+            "data" : ["dashboard", "Pencarian Barang", "Peringatan Stok", "Tambah Barang Baru", "Barang Masuk", "Transfer Barang", "Layout Nomer Rak", "Master Barang"]
+        },
+        {
+            "label" : "Todo List",
+            "data" : ["dashboard", "Pencarian Barang", "Peringatan Stok", "Tambah Barang Baru", "Barang Masuk", "Transfer Barang", "Layout Nomer Rak", "Master Barang"]
+        },
+        {
+            "label" : "Komplain",
+            "data" : ["dashboard", "Pencarian Barang", "Peringatan Stok", "Tambah Barang Baru", "Barang Masuk", "Transfer Barang", "Layout Nomer Rak", "Master Barang"]
+        }
+    ]
+}
