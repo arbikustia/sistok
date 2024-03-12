@@ -7,6 +7,20 @@ $count1 = mysqli_num_rows($get1);
 
 
 ?>
+<!-- <style>
+    
+</style> -->
+
+<style>
+    .collapse{
+        width: 40rem;
+    }
+    #layoutSidenav_nav {
+        width: 20rem; /* Set your desired width here */
+        min-width: 20rem; /* Ensure a minimum width to prevent content overlap */
+    }
+
+</style>
 <div id="layoutSidenav">
     <div id="layoutSidenav_nav">
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -102,18 +116,12 @@ $count1 = mysqli_num_rows($get1);
                             <div class="collapse" id="setting" aria-labelledby="headingOne"
                                 data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="index.php?halaman=user"><i
-                                            class="fa fa-user"></i>&nbsp;Master User</a>
-                                    <a class="nav-link" href="index.php?halaman=toko"><i
-                                            class="fa-solid fa-shop"></i>&nbsp;Master Toko</a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=market_place"><i
-                                            class="fa-solid fa-bag-shopping"></i>&nbsp;Master Market place</a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=market_place"><i
-                                            class="fa-regular fa-handshake"></i>&nbsp;Master Vendor</a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=market_place"><i
-                                            class="fa-solid fa-car-side"></i>&nbsp;Master Ekspedisi</a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=market_place"><i
-                                            class="fa-solid fa-building-columns"></i>&nbsp;Master Perusahaan</a>
+                                    <a class="nav-link" href="index.php?halaman=user"><i class="fa fa-user"></i>&nbsp;Master User</a>
+                                    <a class="nav-link" href="index.php?halaman=toko"><i class="fa-solid fa-shop"></i>&nbsp;Master Toko</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=market_place"><i class="fa-solid fa-bag-shopping"></i>&nbsp;Master Market place</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=vendor"><i class="fa-regular fa-handshake"></i>&nbsp;Master Vendor</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=ekspedisi"><i class="fa-solid fa-car-side"></i>&nbsp;Master Ekspedisi</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=perusahaan"><i class="fa-solid fa-building-columns"></i>&nbsp;Master Perusahaan</a>
                                 </nav>
                             </div>
                         </div>

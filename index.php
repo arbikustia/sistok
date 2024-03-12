@@ -40,6 +40,15 @@
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 12px;
     }
+
+    #sidebarToggle {
+        margin: 0 0 0 4rem;
+
+    }
+
+    #page-wrapper{
+        margin-left: 6rem;
+    }
     </style>
 
     <!-- bootstrap 5 -->
@@ -150,11 +159,19 @@
                         }elseif($_GET["halaman"] == "jatuh_tempo"){
                             include 'jatuh_tempo.php';
                         }elseif($_GET["halaman"] == "tambah_pembayaran"){
-                            include 'tambah_pembayaran.php';
+                            include 'pembayaran_hutang.php';
                         }elseif($_GET["halaman"] == "hak_user"){
                             include 'hak_user.php';
-                        }
-					else{
+                        }elseif($_GET["halaman"] == "vendor"){
+                            include 'vendor.php';
+                	   }
+                        elseif($_GET["halaman"] == "perusahaan"){
+                        include 'perusahaan.php';
+                       }
+                       elseif($_GET["halaman"] == "ekspedisi"){
+                        include 'ekspedisi.php';
+                       }
+					   else{
 						include 'home.php';
 					}
                 }
@@ -175,12 +192,6 @@
     </footer>
     </div>
     </div>
-
-
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
     </script>
@@ -250,16 +261,6 @@
 
     });
     </script>
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>

@@ -20,7 +20,7 @@
 
     <h5>ToDoList</h5>
 
-    <form action="tambah_toDo.php" name="myForm" method="POST" enctype="multipart/form-data">
+    <form action="action/tambah/tambah_toDo.php" name="myForm" method="POST" enctype="multipart/form-data">
       <div class="row">
         <div class="col-sm-2">
           <label class="col-form-label col-form-label-md">Toko</label>
@@ -131,7 +131,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                          <form action="ubah_toDoList.php" method="post">
+                          <form action="action/ubah/ubah_toDoList.php" method="post">
                           <div class="form-group">
                           <!-- <label class="col-form-label col-form-label-sm" for="username">ID User</label> -->
                           <input type="hidden" class="form-control" name="id" value="<?= $data['id']?>" readonly>
@@ -163,7 +163,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                          <form action="hapus_toDoList.php" method="post">
+                          <form action="action/hapus/hapus_toDoList.php" method="post">
                           <div class="form-group">
                                   <input type="hidden" class="form-control" name="id" value="<?= $data['id']?>">
                                   <h6 class="text-center">apakah anda yakin ingin menghapus <span class="text-danger"><?= $data['nama_toko']?> - <?= $data['nama_market']?></span> ? <br></h6>

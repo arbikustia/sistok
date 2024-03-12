@@ -15,8 +15,14 @@
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
-                      <div class="card-header"><h3 class="text-center fw-bold text-white font-weight-light my-4">HELLOMO</h3></div>
+                <?php
+                    include 'koneksi/koneksi.php';
 
+                    $get = mysqli_query($kon, "select * from perusahaan where status = 1");
+                    while ($data = mysqli_fetch_array($get)):
+                ?>
+                      <div class="card-header"><h3 class="text-center fw-bold text-white font-weight-light my-4"><?=$data['nama_perusahaan'] ?></h3></div>
+                <?php endwhile; ?>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
