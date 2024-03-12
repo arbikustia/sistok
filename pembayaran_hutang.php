@@ -30,9 +30,6 @@
 
 .tgl {
     background-color: transparent;
-    width: 1px;
-    height: 1px;
-    border: none;
 }
 
 
@@ -92,19 +89,9 @@
                                          placeholder="Tanggal">
                                  </div>
                                  <div class="form-group">
-                                     <input type="" class="tgl form-control " id="tgl" name="tgl">
                                      <label class="notif" for="tgl">Notification <i class="fa-solid fa-bell"></i></label>
-                                     <input type="text" class="form-control" id="exampleInputPassword1"
-                                         placeholder="Notification">
+                                     <input type="" class="tgl form-control " id="tgl" name="tgl">
                                  </div>
-                                 <!-- <div class="form-group">
-                                <label class="col-form-label col-form-label-sm" for="status">Status</label>
-                                <select type="text" value="" class="form-select" name="level">
-                                    <option value="Admin">Status 1</option>
-                                    <option value="Pegawai">Status 2</option>
-                                </select>
-                            </div> -->
-
                                  <div class="modal-footer mt-2">
                                      <button type="button" class="btn btn-secondary"
                                          data-bs-dismiss="modal">Batal</button>
