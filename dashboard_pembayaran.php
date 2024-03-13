@@ -44,40 +44,40 @@ $count4 = mysqli_num_rows($get4); // hitung kolom
                         <div class="row">
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body text-center fw-bold">TOTAL BARANG</div>
-                                    <h2 class="text-center"><?=$count1; ?></h2>
+                                    <div class="card-body text-center fw-bold">PEMBAYARAN SELESAI</div>
+                                    <h2 class="text-center"><?=0 ?></h2>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="index.php?halaman=barang_detail">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-secondary text-white mb-4">
-                                    <div class="card-body text-center fw-bold">BARANG MASUK</div>
+                                    <div class="card-body text-center fw-bold">PEMBAYARAN JATUH TEMPO</div>
                                     <h2 class="text-center"><?=$count2; ?></h2>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="index.php?halaman=histori">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-success text-white mb-4">
-                                    <div class="card-body text-center fw-bold">BARANG KELUAR</div>
+                                    <div class="card-body text-center fw-bold">PEMBAYARAN BELUM SELESAI</div>
                                     <h2 class="text-center"><?=$count3; ?></h2>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="index.php?halaman=history">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-dark text-white mb-4">
-                                    <div class="card-body text-center fw-bold">TOTAL USER</div>
-                                    <h2 class="text-center"><?=$count4; ?></h2>
+                                    <div class="card-body text-center fw-bold">PEMBAYARAN</div>
+                                    <h2 class="text-center"><?=0; ?></h2>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="index.php?halaman=user">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>

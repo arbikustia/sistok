@@ -134,7 +134,7 @@
                                  <div class="col">
                                      <label class="col-form-label col-form-label-sm" for="username">Peringatan
                                          Stok</label>
-                                     <input type="text" class="form-control" name="stokk">
+                                     <input type="text" class="form-control" name="stokk" disabled>
                                  </div>
                          </div>
                          <div class="modal-footer">
@@ -268,12 +268,28 @@
              </div>
 
              <script>
-             $(".tgl").datetimepicker({
-                 format: 'Y-m-d H:i',
-                 formatTime: 'H:i',
-                 formatDate: 'Y-m-d',
-                 step: 1
-             });
+            //  $(".tgl").datetimepicker({
+            //      format: 'Y-m-d',
+            //     //  formatTime: 'H:i',
+            //      formatDate: 'Y-m-d',
+            //      step: 1,
+            //      timepicker: false, // Disables timepicker
+            //      //minDate: 0,  // Today
+            //      maxDate: 7,  // 7 days from today
+            //  });
+            // Calculate the maximum date as 7 days from today
+var maxDate = new Date();
+maxDate.setDate(maxDate.getDate() + 7);
+
+$(".tgl").datetimepicker({
+    format: 'Y-m-d',
+    formatDate: 'Y-m-d',
+    step: 1,
+    timepicker: false, // Disables timepicker
+    minDate: 0,  // Today
+    maxDate: maxDate,  // 7 days from today
+});
+
 
 
              document.getElementById('customDateIcon').addEventListener('click', function() {
