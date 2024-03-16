@@ -118,7 +118,7 @@ $count1 = mysqli_num_rows($get1);
                                 data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="index.php?halaman=dashboard_pembayaran"><i class="fa-solid fa-house-chimney"></i>&nbsp;Dashboard</a>
-                                    <a class="nav-link" href="index.php?halaman=pencarian_komplain"><i class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;Pencarian komplain</a>
+                                    <!-- <a class="nav-link" href="index.php?halaman=pencarian_komplain"><i class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;Pencarian</a> -->
                                     <a class="nav-link position-relative" href="index.php?halaman=jatuh_tempo"><i class="fa-solid fa-credit-card"></i>&nbsp;Pembayaran Jatuh Tempo</a>
                                     <a class="nav-link position-relative" href="index.php?halaman=tambah_pembayaran"><i class="fa-solid fa-square-plus"></i>&nbsp;Tambah Pembayaran</a>
                                 </nav>
