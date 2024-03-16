@@ -13,9 +13,11 @@
      <style>
 .modal-body {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
+    /* height: fit-content; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 3rem; */
+    /* background-color: red; */
 }
 
 .modal-body form {
@@ -38,22 +40,25 @@
 }
 
 .quesadilla input[type="date"] {
-    padding-right: 30px; /* Adjust padding to accommodate the custom icon */
+    padding-right: 30px;
+    /* Adjust padding to accommodate the custom icon */
 }
 
 #customDateIcon {
     position: absolute;
     top: 50%;
-    right: 10px; /* Adjust the position of the custom icon */
+    right: 10px;
+    /* Adjust the position of the custom icon */
     transform: translateY(-50%);
     cursor: pointer;
-    z-index: 1; /* Ensure the custom icon is above the input */
+    z-index: 1;
+    /* Ensure the custom icon is above the input */
 }
 
 .enchilada::-webkit-calendar-picker-indicator {
-    display: none; /* Hide the default calendar icon */
+    display: none;
+    /* Hide the default calendar icon */
 }
-
      </style>
      <main>
          <div class="container-fluid px-4 mt-3">
@@ -89,8 +94,10 @@
                                          placeholder="Tanggal">
                                  </div>
                                  <div class="form-group">
-                                     <label class="notif" for="tgl">Notification <i class="fa-solid fa-bell"></i></label>
+                                     <label class="notif" for="tgl">Notification <i
+                                             class="fa-solid fa-bell"></i></label>
                                      <input type="" class="tgl form-control " id="tgl" name="tgl">
+                                     <div class="hasil"></div>
                                  </div>
                                  <div class="modal-footer mt-2">
                                      <button type="button" class="btn btn-secondary"
@@ -169,10 +176,7 @@
                               $hasil=mysqli_query($kon,$sql);
                               
                               //Menampilkan data dengan perulangan while
-                              while ($data = mysqli_fetch_array($hasil)):
-                           
-                                  
-                            
+                              while ($data = mysqli_fetch_array($hasil)): 
                           ?>
                              <tr>
                                  <td><?= $no++ ?>.</td>
@@ -268,34 +272,33 @@
              </div>
 
              <script>
-            //  $(".tgl").datetimepicker({
-            //      format: 'Y-m-d',
-            //     //  formatTime: 'H:i',
-            //      formatDate: 'Y-m-d',
-            //      step: 1,
-            //      timepicker: false, // Disables timepicker
-            //      //minDate: 0,  // Today
-            //      maxDate: 7,  // 7 days from today
-            //  });
-            // Calculate the maximum date as 7 days from today
-var maxDate = new Date();
-maxDate.setDate(maxDate.getDate() + 7);
+             //  $(".tgl").datetimepicker({
+             //      format: 'Y-m-d',
+             //     //  formatTime: 'H:i',
+             //      formatDate: 'Y-m-d',
+             //      step: 1,
+             //      timepicker: false, // Disables timepicker
+             //      //minDate: 0,  // Today
+             //      maxDate: 7,  // 7 days from today
+             //  });
+             // Calculate the maximum date as 7 days from today
+             var maxDate = new Date();
+             maxDate.setDate(maxDate.getDate() + 7);
 
-$(".tgl").datetimepicker({
-    format: 'Y-m-d',
-    formatDate: 'Y-m-d',
-    step: 1,
-    timepicker: false, // Disables timepicker
-    minDate: 0,  // Today
-    maxDate: maxDate,  // 7 days from today
-});
-
-
-
+             $(".tgl").datetimepicker({
+                 format: 'Y-m-d',
+                 formatDate: 'Y-m-d',
+                 step: 1,
+                 timepicker: false, // Disables timepicker
+                 minDate: 0, // Today
+                 maxDate: maxDate, // 7 days from today
+             });
              document.getElementById('customDateIcon').addEventListener('click', function() {
-    document.getElementById('myDateInput').focus(); // Open the date picker when the icon is clicked
-});
+                 document.getElementById('myDateInput')
+             .focus(); // Open the date picker when the icon is clicked
+             });
 
+             
              </script>
 
 

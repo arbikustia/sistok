@@ -99,8 +99,11 @@ $count1 = mysqli_num_rows($get1);
                         <div class="collapse" id="collapseLayoutt" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="index.php?halaman=komplain"><i
-                                        class="fa-solid fa-plus"></i>&nbsp;Tambah Komplain</a>
+                                <!-- <a class="nav-link" href="index.php?halaman=komplain"><i class="fa-solid fa-plus"></i>&nbsp;Tambah Komplain</a> -->
+                                <a class="nav-link" href="index.php?halaman=dashboard_komplain"><i class="fa-solid fa-plus"></i>Dashboard</a>
+                                <a class="nav-link" href="index.php?halaman=pencarian_komplain_refund"><i class="fa-solid fa-plus"></i>Pencarian Komplain</a>
+                                <a class="nav-link" href="index.php?halaman=peringatan_komplain"><i class="fa-solid fa-plus"></i>Peringatan Komplain</a>
+                                <a class="nav-link" href="index.php?halaman=komplain"><i class="fa-solid fa-plus"></i>&nbsp;Tambah Komplain / REFUND</a>
                                 <!-- <a class="nav-link" href="index.php?halaman=toko"><i class="fa-solid fa-gear"></i>&nbsp;Master Toko</a> -->
                                 <!-- <a class="nav-link position-relative" href="index.php?halaman=market_place"><i class="fa-solid fa-gear" aria-hidden="true"></i>&nbsp;Master Market place</a> -->
                             </nav>

@@ -46,7 +46,7 @@
 
     }
 
-    #page-wrapper{
+    #page-wrapper {
         margin-left: 6rem;
     }
     </style>
@@ -164,14 +164,17 @@
                             include 'hak_user.php';
                         }elseif($_GET["halaman"] == "vendor"){
                             include 'vendor.php';
-                	   }
-                        elseif($_GET["halaman"] == "perusahaan"){
+                	   }elseif($_GET["halaman"] == "pencarian_komplain_refund"){
+                        include 'pencarian_komplain_refund.php';
+                        }elseif($_GET["halaman"] == "dashboard_komplain"){
+                            include 'dashboard_komplain.php';
+                        }elseif($_GET["halaman"] == "perusahaan"){
                         include 'perusahaan.php';
-                       }
-                       elseif($_GET["halaman"] == "ekspedisi"){
+                       }elseif($_GET["halaman"] == "peringatan_komplain"){
+                        include 'peringatan_komplain.php';
+                       }elseif($_GET["halaman"] == "ekspedisi"){
                         include 'ekspedisi.php';
-                       }
-					   else{
+                       }else{
 						include 'home.php';
 					}
                 }
