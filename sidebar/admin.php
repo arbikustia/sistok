@@ -12,13 +12,17 @@ $count1 = mysqli_num_rows($get1);
 </style> -->
 
 <style>
-    .collapse{
-        width: 40rem;
-    }
-    #layoutSidenav_nav {
-        width: 20rem; /* Set your desired width here */
-        min-width: 20rem; /* Ensure a minimum width to prevent content overlap */
-    }
+.collapse {
+    width: 40rem;
+}
+
+#layoutSidenav_nav {
+    width: 20rem;
+    /* Set your desired width here */
+    min-width: 20rem;
+    background-color: blue;
+    /* Ensure a minimum width to prevent content overlap */
+}
 
 </style>
 <div id="layoutSidenav">
@@ -63,16 +67,10 @@ $count1 = mysqli_num_rows($get1);
                             <a class="nav-link" href="cek_privileges.php?&link=index.php?halaman=master"><i
                                     class="fas fa-file" aria-hidden="true"></i>&nbsp;Master Barang</a>
                             <!--<a class="nav-link" href="cek_privileges.php?&link=index.php?halaman=user"><i class="fas fa-users" aria-hidden="true"></i>&nbsp;Data User</a>-->
-
                         </nav>
                     </div>
-
-
-
-
                 </div>
                 <div class="nav">
-
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayout"
                         aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-list"></i></div>
@@ -88,7 +86,6 @@ $count1 = mysqli_num_rows($get1);
                             <!--<a class="nav-link position-relative" href="index.php?halaman=market_place"><i class="fa-solid fa-gear" aria-hidden="true"></i>&nbsp;Master Market place</a>-->
                         </nav>
                     </div>
-
                     <div class="nav">
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayoutt" aria-expanded="false" aria-controls="collapseLayouts">
@@ -100,19 +97,21 @@ $count1 = mysqli_num_rows($get1);
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <!-- <a class="nav-link" href="index.php?halaman=komplain"><i class="fa-solid fa-plus"></i>&nbsp;Tambah Komplain</a> -->
-                                <a class="nav-link" href="index.php?halaman=dashboard_komplain"><i class="fa-solid fa-plus"></i>Dashboard</a>
-                                <a class="nav-link" href="index.php?halaman=pencarian_komplain_refund"><i class="fa-solid fa-plus"></i>Pencarian Komplain</a>
-                                <a class="nav-link" href="index.php?halaman=peringatan_komplain"><i class="fa-solid fa-plus"></i>Peringatan Komplain</a>
-                                <a class="nav-link" href="index.php?halaman=komplain"><i class="fa-solid fa-plus"></i>&nbsp;Tambah Komplain / REFUND</a>
+                                <a class="nav-link" href="index.php?halaman=dashboard_komplain"><i
+                                        class="fa-solid fa-plus"></i>Dashboard</a>
+                                <a class="nav-link" href="index.php?halaman=pencarian_komplain_refund"><i
+                                        class="fa-solid fa-plus"></i>Pencarian Komplain</a>
+                                <a class="nav-link" href="index.php?halaman=peringatan_komplain"><i
+                                        class="fa-solid fa-plus"></i>Peringatan Komplain</a>
+                                <a class="nav-link" href="index.php?halaman=komplain"><i
+                                        class="fa-solid fa-plus"></i>&nbsp;Tambah Komplain / REFUND</a>
                                 <!-- <a class="nav-link" href="index.php?halaman=toko"><i class="fa-solid fa-gear"></i>&nbsp;Master Toko</a> -->
                                 <!-- <a class="nav-link position-relative" href="index.php?halaman=market_place"><i class="fa-solid fa-gear" aria-hidden="true"></i>&nbsp;Master Market place</a> -->
                             </nav>
                         </div>
-
-                     
                         <div class="nav">
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#hutang-vendor"
-                                aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                data-bs-target="#hutang-vendor" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
                                 PEMBAYARAN HUTANG VENDOR
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
@@ -120,10 +119,14 @@ $count1 = mysqli_num_rows($get1);
                             <div class="collapse" id="hutang-vendor" aria-labelledby="headingOne"
                                 data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="index.php?halaman=dashboard_pembayaran"><i class="fa-solid fa-house-chimney"></i>&nbsp;Dashboard</a>
-                                    <a class="nav-link" href="index.php?halaman=pencarian_komplain"><i class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;Pencarian komplain</a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=jatuh_tempo"><i class="fa-solid fa-credit-card"></i>&nbsp;Pembayaran Jatuh Tempo</a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=tambah_pembayaran"><i class="fa-solid fa-square-plus"></i>&nbsp;Tambah Pembayaran</a>
+                                    <a class="nav-link" href="index.php?halaman=dashboard_pembayaran"><i
+                                            class="fa-solid fa-house-chimney"></i>&nbsp;Dashboard</a>
+                                    <a class="nav-link" href="index.php?halaman=pencarian_komplain"><i
+                                            class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;Pencarian komplain</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=jatuh_tempo"><i
+                                            class="fa-solid fa-credit-card"></i>&nbsp;Pembayaran Jatuh Tempo</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=tambah_pembayaran"><i
+                                            class="fa-solid fa-square-plus"></i>&nbsp;Tambah Pembayaran</a>
                                 </nav>
                             </div>
                         </div>
@@ -138,16 +141,22 @@ $count1 = mysqli_num_rows($get1);
                             <div class="collapse" id="setting" aria-labelledby="headingOne"
                                 data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="index.php?halaman=user"><i class="fa fa-user"></i>&nbsp;Master User</a>
-                                    <a class="nav-link" href="index.php?halaman=toko"><i class="fa-solid fa-shop"></i>&nbsp;Master Toko</a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=market_place"><i class="fa-solid fa-bag-shopping"></i>&nbsp;Master Market place</a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=vendor"><i class="fa-regular fa-handshake"></i>&nbsp;Master Vendor</a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=ekspedisi"><i class="fa-solid fa-car-side"></i>&nbsp;Master Ekspedisi</a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=perusahaan"><i class="fa-solid fa-building-columns"></i>&nbsp;Master Perusahaan</a>
+                                    <a class="nav-link" href="index.php?halaman=user"><i
+                                            class="fa fa-user"></i>&nbsp;Master User</a>
+                                    <a class="nav-link" href="index.php?halaman=toko"><i
+                                            class="fa-solid fa-shop"></i>&nbsp;Master Toko</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=market_place"><i
+                                            class="fa-solid fa-bag-shopping"></i>&nbsp;Master Market place</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=vendor"><i
+                                            class="fa-regular fa-handshake"></i>&nbsp;Master Vendor</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=ekspedisi"><i
+                                            class="fa-solid fa-car-side"></i>&nbsp;Master Ekspedisi</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=perusahaan"><i
+                                            class="fa-solid fa-building-columns"></i>&nbsp;Master Perusahaan</a>
                                 </nav>
                             </div>
                         </div>
-                
+
         </nav>
 
 

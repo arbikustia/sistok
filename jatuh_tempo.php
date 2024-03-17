@@ -81,11 +81,8 @@
                             <td><?= $data['kode'];?></td>
                             <td><?= $data['stokk'];?></td>
                             <td><?= $data['max_stok'];?></td>
-                            <td><button class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalUbah<?= $no ?>">Ubah</button>|
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalHapus<?= $no ?>">Hapus</button>
-                            </td>
+                            <td><?= $data['max_stok'];?></td>
+                           
 
 
                         </tr>
