@@ -8,7 +8,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Login</title>
-        <link href="css/styles.css" rel="stylesheet" />
+        <link href="../../css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="bg-primary">
@@ -16,7 +16,7 @@
             <div id="layoutAuthentication_content">
                 <main>
                 <?php
-                    include 'koneksi/koneksi.php';
+                    include '../../koneksi/koneksi.php';
 
                     $get = mysqli_query($kon, "select * from perusahaan where status = 1");
                     while ($data = mysqli_fetch_array($get)):
@@ -40,10 +40,10 @@
                                     </div>
                                     <?php } ?>
                                     <div class="card-body">
-                                        <form action="proses_login.php" method="post">
+                                        <form action="../../action/login/proses_login.php" method="post">
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="inputEmail" type="username" name="username" placeholder="Username" />
-                                                <label for="inputEmail">Username</label>
+                                                <label for="inputEmail">Username Atau Email</label>
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="inputPassword" type="password" name="password" placeholder="Password" />
@@ -66,7 +66,7 @@
             <div id="layoutAuthentication_footer">
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
+                        <div class="d-flex align-items-center justify-content-end small">
                             <div class="text-muted">HELLOMO &copy; Sistem Informasi Toko 2024</div>
                             <div>
                                

@@ -27,7 +27,7 @@
                         <thead>
                             <tr>						
                                 <th>No</th> 
-							     <th>SKU</th>
+							                  <th>SKU</th>
                                 <th>Nama Barang</th>
                                 <th>Varian</th>
                                 <th>Foto</th>
@@ -57,7 +57,7 @@
                             <td><?= $no++ ?>.</td>
                             <td><?php echo $data['kode_brg'];?></td>
                             <td><?php echo $data['nama_brg'];?></td>
-						   <td><?php echo $data['varian'];?></td>
+						                <td><?php echo $data['varian'];?></td>
                             <td><?php echo $data['foto_brg'];?></td>
                           
                             <td> 

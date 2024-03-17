@@ -4,7 +4,7 @@
 <a class="btn btn-primary btn mt-1 mb-1"  data-bs-toggle="modal" data-bs-target="#modalTambah">Tambah Market Place</a>
 </div>
 
-<div class="modal-body col-md-12 px-4 mt-3">
+  	            <div class="modal-body col-md-12 px-4 mt-3">
                     <div class="table-responsive">
                     <table id="myTable" class="table table-bordered" cellspacing="1">
                         <thead>
