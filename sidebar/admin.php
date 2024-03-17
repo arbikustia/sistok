@@ -5,6 +5,9 @@ include 'koneksi.php';
 $get1 = mysqli_query($kon, "SELECT tbl_barang.kode_brg as kode,sum(tbl_barang.stok),notif.kode_brg,notif.max_stok FROM tbl_barang INNER JOIN notif ON tbl_barang.kode_brg=notif.kode_brg GROUP BY notif.kode_brg HAVING sum(tbl_barang.stok) <= max_stok");
 $count1 = mysqli_num_rows($get1);
 
+// data jatuh tempo
+$get2 = mysqli_query($kon, "SELECT ph.id as id_hutang, ph.tanggal, v.nama_vendor, ph.tglNotif, ph.status, ph.id_user FROM pembayaran_hutang as ph LEFT JOIN vendor as v ON ph.id_vendor=v.id WHERE ph.status='Belum Bayar' AND CURRENT_DATE() > tglNotif order by ph.waktu desc");
+$count2 = mysqli_num_rows($get2);
 
 ?>
 <!-- <style>
@@ -41,8 +44,7 @@ $count1 = mysqli_num_rows($get1);
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                         data-bs-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="index.php?halaman=home"><i class="fas fa-home"
-                                    aria-hidden="true"></i>&nbsp;Dashboard</a>
+                            <a class="nav-link" href="index.php?halaman=home"><i class="fa-solid fa-house-chimney"></i>&nbsp;Dashboard</a>
                             <a class="nav-link" href="cek_privileges.php?&link=index.php?halaman=cari_brg" value=""><i
                                     class="fas fa-search" aria-hidden="true"></i>&nbsp;Pencarian Barang</a>
                             <a class="nav-link position-relative" href="index.php?halaman=notify"><i class="fas fa-bell"
@@ -99,8 +101,11 @@ $count1 = mysqli_num_rows($get1);
                         <div class="collapse" id="collapseLayoutt" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="index.php?halaman=komplain"><i
-                                        class="fa-solid fa-plus"></i>&nbsp;Tambah Komplain</a>
+                                <!-- <a class="nav-link" href="index.php?halaman=komplain"><i class="fa-solid fa-plus"></i>&nbsp;Tambah Komplain</a> -->
+                                <a class="nav-link" href="index.php?halaman=dashboard_komplain"><i class="fa-solid fa-house-chimney"></i>&nbsp;Dashboard</a>
+                                <a class="nav-link" href="index.php?halaman=pencarian_komplain_refund"><i class="fa-solid fa-magnifying-glass"></i>&nbsp;Pencarian Komplain</a>
+                                <a class="nav-link" href="index.php?halaman=peringatan_komplain"><i class="fa-solid fa-bell"></i>&nbsp;Peringatan Komplain</a>
+                                <a class="nav-link" href="index.php?halaman=komplain"><i class="fa-solid fa-plus"></i>&nbsp;Tambah Komplain / REFUND</a>
                                 <!-- <a class="nav-link" href="index.php?halaman=toko"><i class="fa-solid fa-gear"></i>&nbsp;Master Toko</a> -->
                                 <!-- <a class="nav-link position-relative" href="index.php?halaman=market_place"><i class="fa-solid fa-gear" aria-hidden="true"></i>&nbsp;Master Market place</a> -->
                             </nav>
@@ -119,8 +124,30 @@ $count1 = mysqli_num_rows($get1);
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="index.php?halaman=dashboard_pembayaran"><i class="fa-solid fa-house-chimney"></i>&nbsp;Dashboard</a>
                                     <!-- <a class="nav-link" href="index.php?halaman=pencarian_komplain"><i class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;Pencarian</a> -->
-                                    <a class="nav-link position-relative" href="index.php?halaman=jatuh_tempo"><i class="fa-solid fa-credit-card"></i>&nbsp;Pembayaran Jatuh Tempo</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=jatuh_tempo"><i class="fa-solid fa-credit-card"></i>&nbsp;Pembayaran Jatuh Tempo<span
+                                    class="top-2 mb-2 badge rounded-pill bg-danger">
+                                    <?= $count2; ?>
+                                </span></a>
                                     <a class="nav-link position-relative" href="index.php?halaman=tambah_pembayaran"><i class="fa-solid fa-square-plus"></i>&nbsp;Tambah Pembayaran</a>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <div class="nav">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#expedisi"
+                                aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-plane"></i></div>
+                                EKSPEDISI CHINA - INDONESIA
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="expedisi" aria-labelledby="headingOne"
+                                data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="index.php?halaman=e_dashboard"><i class="fa-solid fa-house-chimney"></i>&nbsp;Dashboard</a>
+                                    <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;Pencarian Ekspedisi</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=e_jatuh_tempo"><i class="fa-solid fa-credit-card"></i>&nbsp;Pembayaran Jatuh Tempo
+                                </a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=e_pembayaran"><i class="fa-solid fa-square-plus"></i>&nbsp;Tambah Pembayaran</a>
                                 </nav>
                             </div>
                         </div>

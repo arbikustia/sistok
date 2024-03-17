@@ -5,10 +5,11 @@ if (isset($_POST['BtnSimpan'])) {
 
   $tgl1 = $_POST['tanggal1'];
   $vendor = $_POST['vendor'];
-  $tgl2 = $_POST['tanggal2'];
   $tglNotif = $_POST['tglNotif'];
+
+
  
-  $query = mysqli_query($kon, "INSERT INTO `pembayaran_hutang`(`id`, `id_vendor`, `tanggal1`, `status`, `aktivitas`, `tanggal`, `tglNotif`) VALUES ('','$vendor','$tgl1','Belum Bayar','','$tgl2','$tglNotif');");
+  $query = mysqli_query($kon, "INSERT INTO `pembayaran_hutang`(`id`, `id_vendor`, `tanggal`, `status`, `tglNotif`) VALUES ('','$vendor','$tgl1','Belum Bayar','$tglNotif');");
  
   if($query){
     ?>
