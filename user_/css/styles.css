@@ -6804,7 +6804,7 @@ textarea.form-control-lg {
   position: fixed;
   top: 0;
   right: 0;
-  left: 0;
+  left: 200px;
   z-index: 1030;
 }
 
@@ -10882,6 +10882,7 @@ body {
 
 .sb-sidenav-toggled #layoutSidenav #layoutSidenav_nav {
   transform: translateX(0);
+  
 }
 .sb-sidenav-toggled #layoutSidenav #layoutSidenav_content:before {
   content: "";

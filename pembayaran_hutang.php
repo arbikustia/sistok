@@ -12,12 +12,11 @@
 
      <style>
 .modal-body {
-    width: 100%;
-    /* height: fit-content; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 3rem; */
-    /* background-color: red; */
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+     /* background-color: red;   */
 }
 
 .modal-body form {
@@ -94,10 +93,8 @@
                                          placeholder="Tanggal">
                                  </div>
                                  <div class="form-group">
-                                     <label class="notif" for="tgl">Notification <i
-                                             class="fa-solid fa-bell"></i></label>
-                                     <input type="" class="tgl form-control " id="tgl" name="tgl">
-                                     <div class="hasil"></div>
+                                     <label class="notif" for="tgl">Notification <i class="fa-solid fa-bell" ></i></label>
+                                     <input type="" class="tgl form-control " id="tgl" name="tglNotif">
                                  </div>
                                  <div class="modal-footer mt-2">
                                      <button type="button" class="btn btn-secondary"
