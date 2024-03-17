@@ -2,16 +2,16 @@
 include 'koneksi.php';
 
 
-//getData Total brg
-$get1 = mysqli_query($kon, "select * from master_brg");
+//getData pembayaran selesai
+$get1 = mysqli_query($kon, "SELECT * FROM pembayaran_hutang as ph LEFT JOIN vendor as v ON ph.id_vendor=v.id WHERE status='Sudah Bayar'");
 $count1 = mysqli_num_rows($get1); // hitung koloam
 
-//getData Total brg
-$get2 = mysqli_query($kon, "SELECT * FROM tbl_barang WHERE DATE(tgl) = CURDATE();");
+//getData semua pembayaran
+$get2 = mysqli_query($kon, "SELECT * FROM pembayaran_hutang as ph LEFT JOIN vendor as v ON ph.id_vendor=v.id");
 $count2 = mysqli_num_rows($get2); // hitung kolom
 
-//getData Total transaksi
-$get3 = mysqli_query($kon, "SELECT * FROM transaksi WHERE DATE(tgl) = CURDATE();");
+//getData pembayaran belum selesai
+$get3 = mysqli_query($kon, "SELECT * FROM pembayaran_hutang as ph LEFT JOIN vendor as v ON ph.id_vendor=v.id WHERE status='Belum Bayar'");
 $count3 = mysqli_num_rows($get3); // hitung kolom
 
 //getData Total user
@@ -45,9 +45,9 @@ $count4 = mysqli_num_rows($get4); // hitung kolom
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-primary text-white mb-4">
                                     <div class="card-body text-center fw-bold">PEMBAYARAN SELESAI</div>
-                                    <h2 class="text-center"><?=0 ?></h2>
+                                    <h2 class="text-center"><?= $count1 ?></h2>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="index.php?halaman=history_bayar">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@ $count4 = mysqli_num_rows($get4); // hitung kolom
                                     <div class="card-body text-center fw-bold">PEMBAYARAN JATUH TEMPO</div>
                                     <h2 class="text-center"><?=$count2; ?></h2>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="index.php?halaman=jatuh_tempo">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -67,17 +67,17 @@ $count4 = mysqli_num_rows($get4); // hitung kolom
                                     <div class="card-body text-center fw-bold">PEMBAYARAN BELUM SELESAI</div>
                                     <h2 class="text-center"><?=$count3; ?></h2>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="index.php?halaman=history_belum_bayar">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6">
                                 <div class="card bg-dark text-white mb-4">
-                                    <div class="card-body text-center fw-bold">PEMBAYARAN</div>
-                                    <h2 class="text-center"><?=0; ?></h2>
+                                    <div class="card-body text-center fw-bold">SEMUA PEMBAYARAN</div>
+                                    <h2 class="text-center"><?=$count2; ?></h2>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Selengkapnya</a>
+                                        <a class="small text-white stretched-link" href="index.php?halaman=tambah_pembayaran">Selengkapnya</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
