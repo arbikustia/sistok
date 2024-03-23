@@ -36,7 +36,7 @@
                      </div>
                  </div>
                  <div class="row">
-                     <div class="col">
+                     <div class="col-sm-4">
                          <label class="col-form-label col-form-label-sm" for="username">Nama Barang</label>
                          <input type="text" class="form-control" name="nama" required>
                      </div>
@@ -44,13 +44,9 @@
                          <label class="col-form-label col-form-label-sm" for="username">Stok</label>
                          <input type="number" class="form-control" name="stok">
                      </div>
-                     <div class="col-sm-2">
+                     <div class="col">
                          <label class="col-form-label col-form-label-sm" for="username">Max Stok</label>
                          <input type="number" class="form-control" name="maxStok">
-                     </div>
-                     <div class="col-sm-2">
-                         <label class="col-form-label col-form-label-sm" for="username">Varian</label>
-                         <input type="text" class="form-control" value="<?= $row['varian']?>" name="varian">
                      </div>
                  </div>
                  <div class="row">
@@ -62,13 +58,13 @@
                          </select>
                      </div>
                      <div class="col">
-                         <label for="Image" class="form-label">Foto</label>
-                         <input class="form-control" type="file" name="foto">
+                         <label class="col-form-label col-form-label-sm" for="username">Varian</label>
+                         <input type="text" class="form-control" name="varian">
                      </div>
                  </div>
                  <div class="row">
                      <div class="col">
-                         <label class="col-form-label col-form-label-sm" for="username">Tanggal</label>
+                         <label class="col-form-label col-form-label-sm" for="username">Tanggal Inbound / Masuk Barang</label>
                          <input type="" class="form-control tgl" name="tgl">
                      </div>
                      <div class="col">

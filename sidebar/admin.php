@@ -142,7 +142,7 @@ $count2 = mysqli_num_rows($get2);
                                     <a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass-dollar"></i>&nbsp;Pencarian Ekspedisi</a>
                                     <a class="nav-link position-relative" href="index.php?halaman=e_jatuh_tempo"><i class="fa-solid fa-credit-card"></i>&nbsp;Pembayaran Jatuh Tempo
                                 </a>
-                                    <a class="nav-link position-relative" href="index.php?halaman=e_pembayaran"><i class="fa-solid fa-square-plus"></i>&nbsp;Tambah Pembayaran</a>
+                                    <a class="nav-link position-relative" href="index.php?halaman=e_pembayaran"><i class="fa-solid fa-square-plus"></i>&nbsp;Tambah Kode Marking</a>
                                 </nav>
                             </div>
                         </div>

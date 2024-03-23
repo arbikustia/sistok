@@ -75,7 +75,6 @@
                             <td><?php echo $row['catatan'];?></td>
                             <td><?php echo $row['status'];?></td>
                             <td> 
-                            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $no ?>">Foto</button>|
                             <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalHapus<?= $no ?>">Hapus</button>|
                             <a class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modalUbah<?= $no ?>">Ubah</a>
                           </td>
@@ -301,6 +300,7 @@
                         alert("Nama barang Tidak Boleh Kosong");
                         return false;
                     } 
+                  }
                     </script>
 
                     
