@@ -98,74 +98,88 @@
         <h5 class="font-monospace fw-bold">Peringatan Komplain</h5>
         <!-- <a class="btn btn-primary btn-sm" href="index.php?halaman=add_notif">Tambah Peringatan Stok</a> -->
         <button class=" btn btn-primary btn-sm" id="btn-form">Tambah</button>
-        <form class="form_komplain" id="formTambah">
+        <form class="form_komplain" id="formTambah" action="action/tambah/tambah_komplain.php" method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Tanggal</label>
-                <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input type="date" class="form-control" id="exampleInputEmail1" name="tgl" aria-describedby="emailHelp"
                     placeholder="Tanggal">
             </div>
             <div class="form-group">
-                <label class="col-form-label col-form-label-sm" for="username">Marketplace</label>
-                <select type="text" value="" class="form-select" name="level">
-                    <option value="Admin">Vendor 1</option>
-                    <option value="Pegawai">Vendor 2</option>
+                <label class="col-form-label col-form-label-sm">Marketplace</label>
+                <select data-dselect-search="true" name="marketplace" id="dselect3" class="form-select" required>
+                    <option value="">Pilih</option>
+                    <?php  
+                    include "koneksi.php";
+                    //query menampilkan nama unit kerja ke dalam combobox
+                    $query = mysqli_query($kon, "SELECT * FROM market_place");
+                    while ($row = mysqli_fetch_array($query)) {
+                    ?>
+                    <option value="<?= $row['id'] ?>"><?= $row['nama_market']?></option>
+                    <?php } ?>
                 </select>
-            </div>
+                </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">No Pesanan</label>
-                <input type="number" min="2" max="2" class="form-control" id="exampleInputPassword1"
+                <input type="text" name="pesanan" class="form-control" id="exampleInputPassword1"
                     placeholder="No Pesanan">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Username</label>
-                <input type="text" min="2" max="2" class="form-control" id="exampleInputPassword1"
+                <input type="text" name="username" class="form-control" id="exampleInputPassword1"
                     placeholder="Username">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Produk Refund</label>
-                <input type="text" min="2" max="2" class="form-control" id="exampleInputPassword1"
+                <input type="text" name="refund" class="form-control" id="exampleInputPassword1"
                     placeholder="Produk Refund">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">SKU</label>
-                <input type="text" min="2" max="2" class="form-control" id="exampleInputPassword1" placeholder="SKU">
+                <input type="text" name="sku" class="form-control" id="exampleInputPassword1" placeholder="SKU">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Harga</label>
-                <input type="number" min="2" max="2" class="form-control" id="exampleInputPassword1"
+                <input type="number" name="harga" class="form-control" id="exampleInputPassword1"
                     placeholder="Harga">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">QTY</label>
-                <input type="number" min="2" max="2" class="form-control" id="exampleInputPassword1" placeholder="QTY">
+                <input type="number" name="qty" class="form-control" id="exampleInputPassword1" placeholder="QTY">
             </div>
-            <div class="form-group">Jumlah Refund</label>
-                <input type="number" min="2" max="2" class="form-control" id="exampleInputPassword1"
-                    placeholder="Jumlah Refund">
+            <div class="form-group">
+                <label for="exampleInputPassword1"> Jumlah Refund</label>
+                <input type="number" name="jumlah" class="form-control" id="exampleInputPassword1" placeholder="Jumlah Refund">
             </div>
-            <div class="form-group">Status</label>
-                <input type="text" min="2" max="2" class="form-control" id="exampleInputPassword1" placeholder="Status">
-            </div>
+            <div class="form-group">
+                <label class="col-form-label col-form-label-sm" for="username">Permasalahan</label>
+                <select type="text" value="" class="form-select" name="masalah">
+                    <option value="Barang Kosong">Barang Kosong</option>
+                    <option value="Tidak Terkirim">Tidak Terkirim</option>
+                    <option value="Salah Kirim">Salah Kirim</option>
 
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="col-form-label col-form-label-sm" for="username">Status</label>
+                <select type="text" value="" class="form-select" name="status">
+                    <option value="Belum Selesai">Belum Selesai</option>
+                    <option value="Selesai">Selesai</option>
+                </select>
+            </div>
             <div class="form-group">
                 <label class="notif" for="tgl">Notification <i class="fa-solid fa-bell"></i></label>
-                <input type="" class="tgl form-control " id="tgl" name="tgl">
-            </div>
-
-            <div class="form-group">Aktivitas</label>
-                <input type="text" min="2" max="2" class="form-control" id="exampleInputPassword1"
-                    placeholder="Aktivitas">
+                <input type="" class="tgl form-control " id="tgl" name="tglNotif">
             </div>
             <div></div>
             <div></div>
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" id="close-form">Batal</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" name="BtnSimpan" class="btn btn-primary">Simpan</button>
             </div>
         </form>
 
-
+        <!-- form ubah start-->
         <form class="form_komplain" id="formEdit">
             <div class="form-group">
                 <label for="exampleInputEmail1">Tanggal</label>
@@ -232,6 +246,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
+<!-- form ubah end -->
 
         <div class="modal-body col-md-6 mt-3">
             <div class="table-responsive">

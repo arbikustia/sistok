@@ -3,8 +3,6 @@ include 'koneksi.php';
 session_start();
 
 if (isset($_POST['BtnSimpan'])) {
-  $foto = $_FILES['foto']['name'];
-  $file_tmp = $_FILES['foto']['tmp_name'];
   $kode = $_POST['kode'];
   $koderak = $_POST['rak'];
   $nama = $_POST['nama'];
@@ -38,10 +36,9 @@ if(mysqli_num_rows($queri) >= 1){
 }else{
   
     
-  $query = mysqli_query($kon, "INSERT INTO `tbl_barang`(`id`, `id_user`, `kode_brg`, `kode_rak`, `nama_brg`, `stok`, `varian`, `foto_brg`, `tgl`, `catatan`, `status`) VALUES ('','$_SESSION[id]','$kode','$koderak','$nama','$stok','$varian','$foto','$tgl','$catatan','$status');");
-  move_uploaded_file($file_tmp, 'img_brg/'.$foto); 
+  $query = mysqli_query($kon, "INSERT INTO `tbl_barang`(`id`, `id_user`, `kode_brg`, `kode_rak`, `nama_brg`, `stok`, `varian`,`tgl`, `catatan`, `status`) VALUES ('','$_SESSION[id]','$kode','$koderak','$nama','$stok','$varian','$tgl','$catatan','$status');");
   
-  $query = mysqli_query($kon,"Insert into master_brg (kode_brg,nama_brg,varian,foto_brg) VALUES ('$kode','$nama','$varian','$foto');");
+  $query = mysqli_query($kon,"Insert into master_brg (kode_brg,nama_brg,varian) VALUES ('$kode','$nama','$varian');");
   
   if (!empty($_POST["maxStok"])) {
     

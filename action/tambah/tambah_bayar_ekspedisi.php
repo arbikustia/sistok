@@ -6,8 +6,12 @@ if (isset($_POST['BtnSimpan'])) {
   $ekspedisi = $_POST['ekspedisi'];
   $marking = $_POST['marking'];
   $estimasi = $_POST['estimasi'];
+  $cbm = $_POST['cbm'];
+  $harga = $_POST['harga'];
+  $tagihan = $_POST['tagihan'];
+  $status = $_POST['status'];
 
-  $query = mysqli_query($kon, "INSERT INTO ekspedisi_china (id_ekspedisi, tanggal, marking, estimasi) VALUES ('$ekspedisi','$tanggal','$marking','$estimasi');");
+  $query = mysqli_query($kon, "INSERT INTO ekspedisi_china (id_ekspedisi, tanggal, marking, estimasi, cbm, harga_percbm, tagihan,status) VALUES ('$ekspedisi','$tanggal','$marking','$estimasi','$cbm','$harga','$tagihan','$status');");
  
   if($query){
     ?>
@@ -19,8 +23,8 @@ if (isset($_POST['BtnSimpan'])) {
 }else{
     ?>
     <script type="text/javascript">
-    //    alert("Gagal");
-    //    window.location='../../index.php?halaman=e_pembayaran';
+       alert("Gagal");
+       window.location='../../index.php?halaman=e_pembayaran';
     </script>
      <?php
 }

@@ -13,11 +13,15 @@
                                  aria-label="Close"></button>
                          </div>
                          <div class="modal-body">
-                             <form action="action/tambah/tambah_bayar_ekspedisi.php" method="post">
+                             <form id="myForm" action="action/tambah/tambah_bayar_ekspedisi.php" method="post">
                                  <div class="form-group">
-                                     <label for="exampleInputEmail1">Tanggal</label>
+                                     <label for="exampleInputEmail1">Tanggal Terima</label>
                                      <input type="date" class="form-control" id="exampleInputEmail1"
                                          aria-describedby="emailHelp" name="tanggal" placeholder="Tanggal">
+                                 </div>
+                                 <div class="form-group">
+                                     <label for="exampleInputPassword1">Estimasi Tiba</label>
+                                     <input type="date" name="estimasi" class="form-control" id="exampleInputPassword1" >
                                  </div>
                                  <div class="form-group">
                                  <label class="col-form-label col-form-label-sm">Ekspedisi</label>
@@ -38,9 +42,27 @@
                                      <input type="text" class="form-control" name="marking">
                                  </div>
                                  <div class="form-group">
-                                     <label for="exampleInputPassword1">Estimasi Tiba</label>
-                                     <input type="date" name="estimasi" class="form-control" id="exampleInputPassword1" >
+                                    <label for="cbm">CBM</label>
+                                    <input type="text" class="form-control" id="cbm" name="cbm">
                                  </div>
+                                 <div class="form-group">
+                                        <label for="harga">Harga Per CBM</label>
+                                        <input type="text" class="form-control" id="harga" name="harga">
+                                 </div>
+                                    <div class="form-group">
+                                        <label for="tagihan">Tagihan</label>
+                                        <input type="text" class="form-control" id="tagihan" name="tagihan" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                    <label class="col-form-label col-form-label-sm" for="username">Status</label>
+                                    <select name="status" class="form-select">
+                                        <option >Pilih</option>
+                                        <option value="Dalam Pengiriman">Dalam Pengiriman</option>
+                                        <option value="Telat">Telat</option>
+                                        <option value="Tertahan">Tertahan</option>
+
+                                    </select>
+                                    </div>
                                  <div class="modal-footer mt-2">
                                      <button type="button" class="btn btn-secondary"
                                          data-bs-dismiss="modal">Batal</button>
@@ -59,10 +81,14 @@
                     <thead>
                         <tr>
                         <th>No</th>
-                        <th>Tanggal</th>
+                        <th>Tanggal Terima</th>
+                        <th>Estimasi Tiba</th>
                         <th>Ekspedisi</th>
                         <th>Marking</th>
-                        <th>Estimasi Tiba</th>
+                        <th>CBM</th>
+                        <th>Harga Per CBM</th>
+                        <th>Tagihan</th>
+                        <th>Status</th>
                         <th>Aktivitas</th>
                         </tr>
                     </thead>
@@ -71,7 +97,7 @@
                           $no = 1;
                               // include database
                               include 'koneksi.php';
-                              $sql="SELECT ec.id,ec.tanggal,ec.marking,ec.estimasi, e.nama_ekspedisi FROM `ekspedisi_china` as ec LEFT JOIN ekspedisi as e ON ec.id_ekspedisi=e.id order by ec.waktu desc";                            
+                              $sql="SELECT ec.id,ec.tanggal,ec.cbm,ec.status,ec.harga_percbm,ec.tagihan,ec.marking,ec.estimasi, e.nama_ekspedisi FROM `ekspedisi_china` as ec LEFT JOIN ekspedisi as e ON ec.id_ekspedisi=e.id order by ec.waktu desc";                            
                               $hasil=mysqli_query($kon,$sql);                     
                               //Menampilkan data dengan perulangan while
                               while ($data = mysqli_fetch_array($hasil)):      
@@ -79,14 +105,18 @@
                         <tr>
                         <td><?= $no++ ?>.</td>
                         <td><?= $data['tanggal'];?></td>
+                        <td><?= $data['estimasi'];?></td>
                         <td><?= $data['nama_ekspedisi'];?></td>
                         <td><?= $data['marking'];?></td>
-                        <td><?= $data['estimasi'];?></td>
-                            <td><button class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalUbah<?= $no ?>">Ubah</button>|
-                                <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                    data-bs-target="#modalHapus<?= $no ?>">Hapus</button>
-                            </td>
+                        <td><?= $data['cbm'];?></td>
+                        <td><?= $data['harga_percbm'];?></td>
+                        <td><?= $data['tagihan'];?></td>
+                        <td><?= $data['status'];?></td>
+                        <td><button class="btn btn-warning btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#modalUbah<?= $no ?>">Ubah</button>|
+                            <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                                data-bs-target="#modalHapus<?= $no ?>">Hapus</button>
+                        </td>
                         </tr>
  <!-- Modal Awal Hapus -->
  <div class="modal fade" id="modalHapus<?= $no ?>" tabindex="-1"
@@ -185,8 +215,15 @@
 
           
 
+        <script>
+    document.getElementById("myForm").addEventListener("input", function () {
+        var cbm = parseFloat(document.getElementById("cbm").value);
+        var harga = parseFloat(document.getElementById("harga").value);
+        var tagihan = isNaN(cbm) || isNaN(harga) ? '' : (cbm * harga);
+        document.getElementById("tagihan").value = tagihan;
+    });
+</script>
 
         </div>
-
 
 </main>
