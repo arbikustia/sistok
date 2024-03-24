@@ -86,21 +86,21 @@
             <?php
 					if(isset($_GET["halaman"])){
 						if($_GET["halaman"] == "barang"){
-							include 'barang.php';
+							include 'pages/barangMasuk/barang.php';
 						}elseif($_GET["halaman"] == "transaksi"){
 							include 'tabs.php';
 						}elseif($_GET["halaman"] == "rak"){
-							include 'rak.php';
+							include 'pages/dataRak/rak.php';
 						}elseif($_GET["halaman"] == "history"){
 							include 'history.php';
 						}elseif($_GET["halaman"] == "password"){
 							include 'ganti_pass.php';
 						}elseif($_GET["halaman"] == "input"){
-							include 'input_brg.php';
+							include 'pages/barangMasuk/input_brg.php';
 						}elseif($_GET["halaman"] == "master"){
-							include 'master_brg.php';
+							include 'pages/masterBarang/master_brg.php';
 						}elseif($_GET["halaman"] == "barang_baru"){
-							include 'barang_baru.php';
+							include 'pages/masterBarang/barang_baru.php';
 						}elseif($_GET["halaman"] == "histori"){
 							include 'histori.php';
 						}elseif($_GET["halaman"] == "transfer"){
@@ -114,11 +114,11 @@
 						}elseif($_GET["halaman"] == "cek"){
 							include 'cek_hak.php';
 						}elseif($_GET["halaman"] == "lok"){
-							include 'lokasi.php';
+							include 'pages/gudang/lokasi.php';
 						}elseif($_GET["halaman"] == "detail"){
-							include 'detail_trans_dijalan.php';
+							include 'pages/transferBarang/detail_trans_dijalan.php';
 						}elseif($_GET["halaman"] == "notify"){
-							include 'notifikasi.php';
+							include 'pages/notifikasiInventory/notifikasi.php';
 						} elseif($_GET["halaman"] == "barang_detail"){
 							include 'detail_brg.php';
 						}elseif($_GET["halaman"] == "add_notif"){
@@ -130,11 +130,9 @@
                         }elseif($_GET["halaman"] == "market_place"){
                             include 'market_place.php';
 					    }elseif($_GET["halaman"] == "komplain"){
-                            include 'komplain.php';
+                            include 'pages/komplain/komplain.php';
                         }elseif($_GET["halaman"] == "dashboard_pembayaran"){
                             include 'pages/pembayaranHutang/dashboard_pembayaran.php';
-                        }elseif($_GET["halaman"] == "pencarian_komplain"){
-                            include 'pencarian_komplain.php';
                         }elseif($_GET["halaman"] == "jatuh_tempo"){
                             include 'pages/pembayaranHutang/jatuh_tempo.php';
                         }elseif($_GET["halaman"] == "tambah_pembayaran"){
@@ -144,13 +142,13 @@
                         }elseif($_GET["halaman"] == "vendor"){
                             include 'vendor.php';
                 	    }elseif($_GET["halaman"] == "pencarian_komplain_refund"){
-                            include 'pencarian_komplain_refund.php';
+                            include 'pages/komplain/pencarian_komplain_refund.php';
                         }elseif($_GET["halaman"] == "dashboard_komplain"){
-                            include 'dashboard_komplain.php';
+                            include 'pages/komplain/dashboard_komplain.php';
                         }elseif($_GET["halaman"] == "perusahaan"){
                             include 'perusahaan.php';
                         }elseif($_GET["halaman"] == "peringatan_komplain"){
-                            include 'peringatan_komplain.php';
+                            include 'pages/komplain/peringatan_komplain.php';
                         }elseif($_GET["halaman"] == "ekspedisi"){
                             include 'ekspedisi.php';
                         }elseif($_GET["halaman"] == "history_bayar"){

@@ -116,19 +116,19 @@
 
         <div id="Tab1" class="tabcontent">
          <?php 
-         include 'retur.php';
+         include 'pages/returTransfer/retur.php';
          ?>
         </div>
 
         <div id="Tab2" class="tabcontent">
         <?php 
-         include 'retur_dijalan.php';
+         include 'pages/returTransfer/retur_dijalan.php';
          ?>
         </div>
 
         <div id="Tab3" class="tabcontent">
         <?php 
-         include 'retur_selesai.php';
+         include 'pages/returTransfer/retur_selesai.php';
          ?>
         </div>
       </div>
@@ -152,14 +152,14 @@
 
         <div id="T1" class="tabcontent">
          <?php 
-         include 'transaksi.php';
+         include 'pages/transferBarang/transaksi.php';
          ?>
         </div>
 
         <div id="T2" class="tabcontent">
             <div class="menu">
         <?php 
-         include 'transfer_dijalan.php';
+         include 'pages/transferBarang/transfer_dijalan.php';
          ?>
          </div>
         </div>
@@ -167,7 +167,7 @@
         <div id="T3" class="tabcontent">
             <div class="menu2">
         <?php 
-         include 'transaksi_selesai.php';
+         include 'pages/transferBarang/transaksi_selesai.php';
          ?>
          </div>
         </div>
